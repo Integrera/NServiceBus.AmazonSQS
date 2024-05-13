@@ -396,7 +396,8 @@ namespace NServiceBus.Transport.SQS
                 {
                     BucketName = configuration.S3BucketForLargeMessages,
                     InputStream = bodyStream,
-                    Key = key
+                    Key = key,
+                    DisablePayloadSigning = true
                 };
                 ApplyServerSideEncryptionConfiguration(putObjectRequest);
 
